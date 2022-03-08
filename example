@@ -1,0 +1,4 @@
+BIND=0.0.0.0
+PORT=1313
+ENVIRONMENT=development
+BASEURL=http://example.tld

@@ -1,0 +1,13 @@
+[Unit]
+Description=Hugo Server
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=
+ExecStart=hugo serve --appendPort=false "--baseURL=${BASEURL}" "--port=${PORT}" "--bind=${BIND}" '--source=' "--environment=${ENVIRONMENT}"
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
